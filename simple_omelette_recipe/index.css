@@ -1,160 +1,145 @@
-/* ========== Base / Reset ========== */
-* {
-  box-sizing: border-box;
+body{
+  margin: 2;
+  padding: 30px 20px;
+  background-color:#f3e5d8;
+  font-family: sans-serif;
+  color: #5f5751;
+  display: flex;
+  justify-content: center;
 }
 
-body {
-  margin: 0;
-  padding: 32px 16px;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: #f6f5f3;
-  color: #1f1f1f;
-  line-height: 1.6;
-}
 
-/* ========== Recipe Card ========== */
-.recipe-card {
-  max-width: 720px;
-  margin: 0 auto;
-  background: #ffffff;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-  padding: 22px;
-}
-
-/* Image */
-.recipe-image {
+.recipe-card{
+  background-color:#ffffff;
+  max-width: 650px;
   width: 100%;
-  display: block;
-  border-radius: 14px;
-  margin-bottom: 16px;
-  object-fit: cover;
+  broder-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 4px 20px  rgba(0,0,0,0,.35)
 }
 
-/* Title + text */
-.title {
-  margin: 6px 0 8px;
-  font-size: 32px;
+.recipe-img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit:cover;
+  border-radius: 12px;
+  margin-bottom: 30px;
+     
+}
+
+h1 {
+  font-family:'Young Serif', serif;
+  color:#312e2c;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
   line-height: 1.2;
+  
+}
+
+h2{
+  font-family:'Young Serif', serif;
+  color:#854632;
+  font-size:1.6rem;
+  margin-top: 0;
 }
 
 .description {
-  margin: 0 0 18px;
-  color: #444;
-  font-size: 15.5px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  font-size: 1rem;
 }
 
-/* Divider */
-hr {
-  border: none;
-  height: 1px;
-  background: #e8e6e3;
-  margin: 18px 0;
+.prep-box{
+  background-color:#fff7fb;
+  padding:25px;
+  border-radius: 12px;
+  margin-bottom: 30px;
 }
 
-/* ========== Prep Box ========== */
-.prep-box {
-  background: #fff4fb;
-  border: 1px solid #f2d6e8;
-  border-radius: 14px;
-  padding: 16px 16px;
+.prep-box h3{
+  color:#7b284f;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
 }
 
-.prep-box h3 {
-  margin: 0 0 10px;
-  font-size: 16px;
-  color: #7a2a57;
-}
-
-.prep-box ul {
+.prep-box ul{
   margin: 0;
-  padding-left: 18px;
+  padding-left: 20px;
 }
 
 .prep-box li {
-  margin: 6px 0;
+  margin-botton: 10px;
+  padding-left: 10px;
 }
 
-/* ========== Sections ========== */
-.section h2 {
-  margin: 0 0 10px;
-  font-size: 22px;
+.prep-box li::marker{
+  color: #7b284f;
 }
 
-.styled-list {
-  margin: 0;
+.section{
+  margin-bottom: 30px;
+}
+
+.styled-list, .instruction-list{
   padding-left: 20px;
+  line-height: 1.6;
 }
 
-.styled-list li {
-  margin: 8px 0;
+.styled-list li{
+  margin-bottom: 10px;
+  padding-left: 15px;
 }
 
-/* Instructions */
-.instruction-list {
-  margin: 0;
-  padding-left: 20px;
+.styled-list list::marker {
+  color:#854632;
 }
 
-.instruction-list li {
-  margin: 10px 0;
+.Instruction-list li{
+  padding-left:15px;
+  margin-bottom: 15px;
 }
 
-.instruction-list strong {
-  color: #2c2c2c;
+.Instruction-list li::marker {
+  color:#854632;
+  font-weight: bold;
 }
 
-/* Nutrition note */
-.note {
-  margin: 0 0 12px;
-  color: #444;
+hr{
+  boder: 0;
+  border-top: 1px solid #e3e1de;
+  margin: 30px 0;
 }
 
-/* ========== Nutrition Table ========== */
-.nutrition-table {
+.nutrition-table{
   width: 100%;
   border-collapse: collapse;
-  overflow: hidden;
-  border-radius: 12px;
-  border: 1px solid #eceae6;
+  margin-top: 15px;
 }
 
-.nutrition-table tr {
-  border-bottom: 1px solid #eceae6;
+.nutrition-table td{
+  padding: 12px 25px;
+  border-bottom: 1px solid #e3e1de;
 }
 
-.nutrition-table tr:last-child {
+.nutrition-table tr:last-child td {
   border-bottom: none;
 }
 
-.label-cell,
-.value-cell {
-  padding: 12px 14px;
-  font-size: 15px;
+.table-cell{
+  font-weight: 400;
 }
 
-.label-cell {
-  color: #555;
-}
-
-.value-cell {
-  text-align: right;
+.value-cell{
+  color:#854632;
   font-weight: 700;
-  color: #7a2a57;
 }
 
-/* ========== Responsive ========== */
 @media (max-width: 480px) {
-  body {
-    padding: 18px 12px;
-  }
-
-  .recipe-card {
-    padding: 16px;
-  }
-
-  .title {
-    font-size: 26px;
-  }
+  body {padding: 0;}
+  .recipe-card {border-radius: 0; padding: 25px;}
+  h1{ font-size: 1.8rem }
 }
+
+ 
